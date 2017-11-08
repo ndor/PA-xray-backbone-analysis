@@ -455,7 +455,7 @@ def make_input_image(image_path, result_size=(196, 128)):
 
 
 def net(size=(196, 128, 4)):
-    model_description = 'printXray'
+    model_description = 'Xray'
     act = 'relu'
     input = Input(shape=size)
 
@@ -617,7 +617,7 @@ if __name__ == '__main__':
     # y = spine_parser(x)
 
     for i in range(21):
-        path = '/home/nate/Desktop/oren/basePAdata/PAdataset/' + str(i) + '.png'
+        path = '/home/nate/Desktop/basePAdata/PAdataset/' + str(i) + '.png'
         x = cv2.imread(path, 1)
         x = cv2.resize(x, None, fx=0.25, fy=0.25)
         y = x[:, :, 0]
